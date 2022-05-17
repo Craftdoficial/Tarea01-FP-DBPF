@@ -1,4 +1,4 @@
-package Examen_Programación;
+package Examen_ProgramaciónDBPF;
 import java.util.Scanner;
 
 /**
