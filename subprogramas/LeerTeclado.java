@@ -1,13 +1,23 @@
 package subprogramas;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class LeerTeclado {
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); //Ya tenemos lo que sea que hayamos hecho
     public int print(String mensaje, int valor) {
-        return 0;
+        System.out.println(mensaje+":");
+        try {
+            valor=Integer.parseInt(br.readLine());
+        } catch (Exception e) {
+            System.err.println("el valor que ingreso es incorrecto");
+        }   
+        return valor;
     }
     public String print(String mensaje, String valor) {
         return "0";
     }
-    public Float print(String mensaje, Float valor) {
+    public float print(String mensaje, float valor) {
         return 0;
     }
     public double print(String mensaje, double valor) {
