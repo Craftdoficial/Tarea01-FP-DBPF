@@ -1,4 +1,4 @@
-
+package EstCondicional;
 import java.util.Scanner;
 
 public class Ejercicio38 {

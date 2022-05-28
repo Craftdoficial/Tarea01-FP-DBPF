@@ -1,3 +1,4 @@
+package EstCondicional;
 import java.util.Scanner;
 
 /**
