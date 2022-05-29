@@ -8,7 +8,7 @@ public class ClienteDeUnBanco {
         int i, n;
         double cantidad_01_enero, cantidad_02_febrero, cantidad_03_marzo, cantidad_04_abril, cantidad_05_mayo;
         double cantidad_06_junio, cantidad_07_julio, cantidad_08_agosto, cantidad_09_septiembre, cantidad_10_octubre;
-        double cantidad_11_noviembre, cantidad_12_diciembre, intereses, inversion_final, total;
+        double cantidad_11_noviembre, cantidad_12_diciembre, intereses=0, inversion_final, total;
         total = 0;
         System.out.print("Ingresa el valor de n: ");
         n = in.nextInt();
@@ -52,13 +52,13 @@ public class ClienteDeUnBanco {
             cantidad_12_diciembre = in.nextDouble();
             in.nextLine();
             intereses=total*0.1;
-            total=total+intereses+cantidad_01_enero+cantidad_02_febrero+cantidad_03_marzo+cantidad_04_abril+cantidad_05_mayo+cantidad_06_junio+cantidad_07_julio+cantidad_08_agosto+cantidad_09_septiembre+cantidad_10_octubre+cantidad_11_noviembre+cantidad_12_diciembre;
-            inversion_final=total;
+            total=total+intereses;
+            total=cantidad_01_enero+cantidad_02_febrero+cantidad_03_marzo+cantidad_04_abril+cantidad_05_mayo+cantidad_06_junio+cantidad_07_julio+cantidad_08_agosto+cantidad_09_septiembre+cantidad_10_octubre+cantidad_11_noviembre+cantidad_12_diciembre;
+            intereses=total*0.1;
+            inversion_final=total+intereses;
             System.out.println("Valor de intereses: " + intereses);
             System.out.println("Valor de inversion final: " + inversion_final);
             System.out.println();
         }
-        System.out.println("Valor de total: " + total);
     }
-
 }
