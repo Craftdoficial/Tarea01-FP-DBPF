@@ -40,18 +40,15 @@ public class Ejercicio42 {
             } else { System.out.println("La hamburguesa solicitada no existe, porfavor eliga otra");}
             System.out.println("¿Hay más hamburguesas a elegir? : S=Si, N=NO");
             hayMas=String.valueOf(lt.next().toUpperCase().charAt(0));
-            System.out.println("EL cliente pagará con T=Tarjeta, E=Efectivo");
-            pagaracon=String.valueOf(lt.next().toUpperCase().charAt(0));
-            if (pagaracon=="Tarjeta") {
-            if (pagaracon== "Tarjeta") {
-                totalpagar=lt.nextDouble(); }
-       totalpagar= (preciototalporhamburguesaS+preciototalporhamburguesaD+preciototalporhamburguesaT)+((preciototalporhamburguesaS+preciototalporhamburguesaD+preciototalporhamburguesaT)*0.05);
-             }  if (pagaracon=="Efectivo") {
-                 if (pagaracon=="Efectivo") {
-        totalpagar=lt.nextDouble();}
-        totalpagar= (preciototalporhamburguesaS+preciototalporhamburguesaD+preciototalporhamburguesaT);
-        }
+            
      }
+     System.out.println("EL cliente pagará con T=Tarjeta, E=Efectivo");
+            pagaracon=String.valueOf(lt.next().toUpperCase().charAt(0));
+            if (pagaracon.equals("T")) {
+             totalpagar= (preciototalporhamburguesaS+preciototalporhamburguesaD+preciototalporhamburguesaT)+((preciototalporhamburguesaS+preciototalporhamburguesaD+preciototalporhamburguesaT)*0.05);
+             }else{ 
+             totalpagar= (preciototalporhamburguesaS+preciototalporhamburguesaD+preciototalporhamburguesaT);
+        } 
         System.out.println("El precio por hamburguesa sencilla es de "+precioS+" soles");
         System.out.println("El precio por hamburguesa doble es de "+precioD+" soles");
         System.out.println("El precio por hamburguesa triple es de "+precioT+" soles");
